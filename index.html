@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cryptowatch</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <main class="content">
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="cell small-12 large-2">
+            <aside class="navigation">
+              <nav>
+                <ul>
+                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#">Wallet</a></li>
+                  <li><a href="#">Transactions</a></li>
+                  <li><a href="#">Exchange</a></li>
+                </ul>
+              </nav>
+            </aside>
+          </div>
+          <div class="cell small-12 medium-12 large-10">
+
+            <section class="dashboard__title">
+              <div class="grid-x">
+                <div class="cell">
+                  <h1>Cryptowatch Dashboard</h1>
+                </div>
+              </div>
+            </section>
+            
+            <section class="dashboard__crypto-cards">
+              <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-6 large-3">
+                  <div class="dashboard__crypto-card">
+                    <h2 class="dashboard__crypto-card--title">Bitcoin</h2>
+                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    <span class="dashboard__crypto-card--status"></span>
+                    <span class="dashboard__crypto-card--price" id="pricebtc"></span>
+                
+                  </div>
+                  
+                </div>
+                <div class="cell small-12 medium-6 large-3">
+                  <div class="dashboard__crypto-card">
+                    <h2 class="dashboard__crypto-card--title">Etherium</h2>
+                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    <span class="dashboard__crypto-card--status"></span>
+                    <span class="dashboard__crypto-card--price" id="priceeth"></span>
+                  </div>
+                </div>
+                <div class="cell small-12 medium-6 large-3">
+                  <div class="dashboard__crypto-card">
+                    <h2 class="dashboard__crypto-card--title">Cardano</h2>
+                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    <span class="dashboard__crypto-card--status"></span>
+                    <span class="dashboard__crypto-card--price" id="priceada"></span>
+                  </div>
+                </div>
+                <div class="cell small-12 medium-6 large-3">
+                  <div class="dashboard__crypto-card">
+                    <h2 class="dashboard__crypto-card--title">Dogecoin</h2>
+                     <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    <span class="dashboard__crypto-card--status"></span>
+                    <span class="dashboard__crypto-card--price" id="pricedoge"></span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </main>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/cryptoapi.js"></script>
+  </body>
+</html>

@@ -1,5 +1,7 @@
 body {
     background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .content>.grid-container {
@@ -52,6 +54,10 @@ body {
         h1 {
             font-size: 24px;
         }
+    }
+
+    h2 {
+        font-size: 20px;
     }
 
     &__crypto-card {
@@ -110,6 +116,7 @@ body {
             display: none;
             font-size: 28px;
             font-weight: bold;
+            text-transform: uppercase;
         }
 
         &--status {

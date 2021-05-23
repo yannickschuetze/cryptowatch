@@ -8,14 +8,27 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
+    <header>
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="cell">
+            <ul class="currency dropdown menu" data-dropdown-menu>
+              <li><a href="#" class="currency__usd">USD</a></li>
+              <li><a href="#" class="currency__eur">EUR</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    </header>
     <main class="content">
       <div class="grid-container">
         <div class="grid-x">
-          <div class="cell small-12 large-2">
+          <div class="cell small-12 large-3">
             <aside class="navigation">
               <nav>
                 <ul>
-                  <li><a href="#">Dashboard</a></li>
+                  <li><a href="#" class="active">Dashboard</a></li>
                   <li><a href="#">Wallet</a></li>
                   <li><a href="#">Transactions</a></li>
                   <li><a href="#">Exchange</a></li>
@@ -23,7 +36,7 @@
               </nav>
             </aside>
           </div>
-          <div class="cell small-12 medium-12 large-10 dashboard">
+          <div class="cell small-12 medium-12 large-9 dashboard">
             <section class="dashboard__title">
               <div class="grid-x">
                 <div class="cell">
@@ -33,36 +46,63 @@
             </section>
             
             <section class="dashboard__crypto-top">
-              <h2>Top marketcap cryptocurrencies</h2>
+              <h2>Top market cap</h2>
               <div class="dashboard__crypto-cards">
                 <div class="grid-x grid-margin-x">
-                  <div class="cell small-12 medium-6 large-3">
+                  <div class="cell small-12 large-6 xlarge-3">
                     <div class="dashboard__crypto-card" id="crypto-top-0">
-                      <h3 class="dashboard__crypto-card--title"></h3>
+                      <div class="dashboard__crypto-card--top">
+                        <img src="" alt="" class="dashboard__crypto-card--image">
+                        <div class="dashboard__crypto-card--name">
+                          <h3 class="dashboard__crypto-card--title"></h3>
+                          <span class="dashboard__crypto-card--symbol"></span>
+                        </div>
+                      </div>
                       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-                      <span class="dashboard__crypto-card--status"></span>
-                      <span class="dashboard__crypto-card--price"></span>
+                      <div class="dashboard__crypto-card--bottom">
+                        <span class="dashboard__crypto-card--status"></span>
+                        <span class="dashboard__crypto-card--price"></span>
+                      </div>
+                      
                     </div>
                   </div>
-                  <div class="cell small-12 medium-6 large-3">
+                  <div class="cell small-12 large-6 xlarge-3">
                     <div class="dashboard__crypto-card" id="crypto-top-1">
-                      <h3 class="dashboard__crypto-card--title"></h3>
+                      <div class="dashboard__crypto-card--top">
+                        <img src="" alt="" class="dashboard__crypto-card--image">
+                        <div class="dashboard__crypto-card--name">
+                          <h3 class="dashboard__crypto-card--title"></h3>
+                          <span class="dashboard__crypto-card--symbol"></span>
+                        </div>
+                      </div>
                       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
                       <span class="dashboard__crypto-card--status"></span>
                       <span class="dashboard__crypto-card--price"></span>
                     </div>
                   </div>
-                  <div class="cell small-12 medium-6 large-3">
+                  <div class="cell small-12 large-6 xlarge-3">
                     <div class="dashboard__crypto-card" id="crypto-top-2">
-                      <h3 class="dashboard__crypto-card--title"></h3>
+                      <div class="dashboard__crypto-card--top">
+                        <img src="" alt="" class="dashboard__crypto-card--image">
+                        <div class="dashboard__crypto-card--name">
+                          <h3 class="dashboard__crypto-card--title"></h3>
+                          <span class="dashboard__crypto-card--symbol"></span>
+                        </div>
+                      </div>
                       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
                       <span class="dashboard__crypto-card--status"></span>
                       <span class="dashboard__crypto-card--price"></span>
                     </div>
                   </div>
-                  <div class="cell small-12 medium-6 large-3">
+                  <div class="cell small-12 large-6 xlarge-3">
                     <div class="dashboard__crypto-card" id="crypto-top-3">
-                      <h3 class="dashboard__crypto-card--title"></h3>
+                      <div class="dashboard__crypto-card--top">
+                        <img src="" alt="" class="dashboard__crypto-card--image">
+                        <div class="dashboard__crypto-card--name">
+                          <h3 class="dashboard__crypto-card--title"></h3>
+                          <span class="dashboard__crypto-card--symbol"></span>
+                        </div>
+                      </div>
                        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
                       <span class="dashboard__crypto-card--status"></span>
                       <span class="dashboard__crypto-card--price"></span>
@@ -73,10 +113,10 @@
             </section>
 
             <section class="dashboard__crypto-trending">
-              <h2>Trending cryptocurrencies</h2>
+              <h2>Trending</h2>
               <div class="dashboard__crypto-cards">
                 <div class="grid-x grid-margin-x">
-                  <div class="cell small-12 medium-6 large-3">
+                  <div class="cell small-12 large-6 xlarge-3">
                     <div class="dashboard__crypto-card" id="crypto-trending-0">
                       <h3 class="dashboard__crypto-card--title"></h3>
                       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
@@ -84,7 +124,7 @@
                       <span class="dashboard__crypto-card--price"></span>
                     </div>
                   </div>
-                  <div class="cell small-12 medium-6 large-3">
+                  <div class="cell small-12 large-6 xlarge-3">
                     <div class="dashboard__crypto-card" id="crypto-trending-1">
                       <h3 class="dashboard__crypto-card--title"></h3>
                       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
@@ -92,7 +132,7 @@
                       <span class="dashboard__crypto-card--price"></span>
                     </div>
                   </div>
-                  <div class="cell small-12 medium-6 large-3">
+                  <div class="cell small-12 large-6 xlarge-3">
                     <div class="dashboard__crypto-card" id="crypto-trending-2">
                       <h3 class="dashboard__crypto-card--title"></h3>
                       <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
@@ -100,7 +140,7 @@
                       <span class="dashboard__crypto-card--price"></span>
                     </div>
                   </div>
-                  <div class="cell small-12 medium-6 large-3">
+                  <div class="cell small-12 large-6 xlarge-3">
                     <div class="dashboard__crypto-card" id="crypto-trending-3">
                       <h3 class="dashboard__crypto-card--title"></h3>
                        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>

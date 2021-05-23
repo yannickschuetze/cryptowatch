@@ -1,7 +1,4 @@
 body {
-    background-image: url(../img/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .content>.grid-container {
@@ -19,7 +16,14 @@ body {
                 position: relative;
                 font-size: 24px;
                 color: white;
+ 
 
+                &.active {
+                    color: $primary-color;
+                    &:after {
+                        background: $primary-color;
+                    }
+                }
 
                 &:after {
                     content: "";
@@ -62,8 +66,7 @@ body {
 
     &__crypto-card {
         position: relative;
-        background: rgba( 255, 255, 255, 0.40 );
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        background: $medium-gray;
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
         padding: 16px;
@@ -107,15 +110,32 @@ body {
               transform: rotate(360deg);
             }
           }
+        
+          &--top {
+              display: flex;
+          }
+
+          &--image {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            display: none;
+          }
 
         &--title {
             font-size: 20px;
+            margin: 0;
         }
 
         &--price {
             display: none;
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        &--symbol {
+            display: block;
             text-transform: uppercase;
         }
 

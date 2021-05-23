@@ -10,13 +10,14 @@ function getTopCoins() {
             console.log(data[i].name)
             $('#crypto-top-' + i + ' .lds-ring').css('display', 'none')
             $('.dashboard__crypto-card--price').fadeIn('slow')
-            $('#crypto-top-' + i + ' .dashboard__crypto-card--title').text(data[i].name + ' (' + data[i].symbol + ')')
+            $('.dashboard__crypto-card--image').fadeIn('slow')
+            $('#crypto-top-' + i + ' .dashboard__crypto-card--title').text(data[i].name)
+            $('#crypto-top-' + i + ' .dashboard__crypto-card--symbol').text(data[i].symbol)
             $('#crypto-top-' + i + ' .dashboard__crypto-card--price').text(data[i].current_price + '$')
-
+            $('#crypto-top-' + i + ' .dashboard__crypto-card--image').attr("src", data[i].image)
         }
     })
     .catch((err) => console.error("Rejected", err))
-    // apiLoaded()
 }
 
 function getTrendingCoins() {
@@ -26,11 +27,12 @@ function getTrendingCoins() {
         console.log(data)
         for(var i = 0; i < 4; i++) {
             $('#crypto-trending-' + i + ' .lds-ring').css('display', 'none')
-            $('#crypto-trending-' + i + ' .dashboard__crypto-card--title').text(data.coins[i].item.name + ' (' + data.coins[i].item.symbol + ')')
+            $('#crypto-trending-' + i + ' .dashboard__crypto-card--title').text(data.coins[i].item.name)
+            $('#crypto-trending-' + i + ' .dashboard__crypto-card--symbol').text(data.coins[i].item.symbol)
+            // return fetch( api_url + 'coins/' + data.coins[i].item.name)
         }
     })
     .catch((err) => console.error("Rejected", err))
-    //apiLoaded()
 }
 
 function refreshPrices() {
@@ -40,7 +42,7 @@ function refreshPrices() {
         console.log(data)
         for(var i = 0; i < data.length; i++) {
             console.log(data[i].name)
-            $('#crypto-top-' + i + ' .dashboard__crypto-card--price').text(data[i].current_price + ' ' + currency)
+            $('#crypto-top-' + i + ' .dashboard__crypto-card--price').text(data[i].current_price + '$')
         }
     })
     .catch((err) => console.error("Rejected", err))
@@ -51,6 +53,6 @@ getTrendingCoins()
 
 var intervalId = window.setInterval(function(){
     refreshPrices()
-  }, 10000)
+  }, 5000)
 
 

@@ -11,9 +11,7 @@
 
 // Grids (choose one)
 @include foundation-xy-grid-classes;
-// @include foundation-grid;
-// @include foundation-flex-grid;
-
+ 
 // Generic components
 @include foundation-button;
 @include foundation-button-group;
@@ -22,7 +20,7 @@
 @include foundation-progress-bar;
 @include foundation-slider;
 @include foundation-switch;
-@include foundation-table;
+@include foundation-table; 
 // Basic components
 @include foundation-badge;
 @include foundation-breadcrumbs;
@@ -43,7 +41,6 @@
 @include foundation-menu;
 @include foundation-menu-icon;
 @include foundation-accordion-menu;
-@include foundation-drilldown-menu;
 @include foundation-dropdown-menu;
 
 // Layout components

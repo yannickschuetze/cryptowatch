@@ -24,7 +24,7 @@ function getTopCoins() {
             $('.dashboard__crypto-card--image').fadeIn('slow')
             $('#crypto-top-' + i + ' .dashboard__crypto-card--title').text(data[i].name)
             $('#crypto-top-' + i + ' .dashboard__crypto-card--symbol').text(data[i].symbol)
-            $('#crypto-top-' + i + ' .dashboard__crypto-card--price').text(data[i].current_price + '$')
+            $('#crypto-top-' + i + ' .dashboard__crypto-card--price').text('$' + data[i].current_price)
             $('#crypto-top-' + i + ' .dashboard__crypto-card--image').attr("src", data[i].image)
         }
     })
@@ -41,7 +41,7 @@ function getTrendingCoins() {
             $('#crypto-trending-' + i + ' .lds-ring').css('display', 'none')
             $('#crypto-trending-' + i + ' .dashboard__crypto-card--title').text(data.coins[i].item.name)
             $('#crypto-trending-' + i + ' .dashboard__crypto-card--symbol').text(data.coins[i].item.symbol)
-            $('#crypto-trending-' + i + ' .dashboard__crypto-card--price').text(calcPrice.toFixed(2) + '$')
+            $('#crypto-trending-' + i + ' .dashboard__crypto-card--price').text('$' + calcPrice.toFixed(2))
             $('#crypto-trending-' + i + ' .dashboard__crypto-card--image').attr("src", data.coins[i].item.small)
         }
     })
@@ -54,7 +54,7 @@ function refreshPrices() {
     .then((res) => res.json())
     .then((data) => {
         for(var i = 0; i < data.length; i++) {
-            $('#crypto-top-' + i + ' .dashboard__crypto-card--price').text(data[i].current_price + '$')
+            $('#crypto-top-' + i + ' .dashboard__crypto-card--price').text('$' + data[i].current_price)
         }
         console.log('Prices refreshed')
     })
@@ -67,6 +67,6 @@ getTopCoins()
 
 var intervalId = window.setInterval(function(){
     refreshPrices()
-  }, 5000)
+  }, 10000)
 
 
